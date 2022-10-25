@@ -33,29 +33,31 @@ class _MyAppState extends State<MyApp> {
         brightness: Brightness.dark,
         primarySwatch: Colors.orange
       ),
-      home: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Text("TODO: Make a website"),
-          Container(height: 5),
-          Text.rich(
-            TextSpan(
-              text: "SWAssistant for Web",
-              style: const TextStyle(
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.blueAccent
-              ),
-              recognizer: link,
+      home: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Text("TODO: Make a website"),
+            Container(height: 5),
+            Text.rich(
+              TextSpan(
+                text: "SWAssistant for Web",
+                style: const TextStyle(
+                  decoration: TextDecoration.underline,
+                  decorationColor: Colors.blueAccent
+                ),
+                recognizer: link,
+              )
+            ),
+            Container(height: 5),
+            ElevatedButton(
+              onPressed: () => setState(() => dark = !dark),
+              child: dark ? const Text("Light Mode") : const Text("Dark Mode")
             )
-          ),
-          Container(height: 5),
-          ElevatedButton(
-            onPressed: () => setState(() => dark = !dark),
-            child: dark ? const Text("Light Mode") : const Text("Dark Mode")
-          )
-        ],
-      ),
+          ],
+        ),
+      )
     );
   }
 }
