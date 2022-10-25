@@ -1,49 +1,60 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
+import 'dart:html';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  bool dark = true;
+
   @override
   Widget build(BuildContext context) {
+    var link = TapGestureRecognizer();
+    link.onTap = () => window.open("SWAssistant", "SWAssistant");
     return MaterialApp(
       title: 'Darkstorm.tech',
-      themeMode: ThemeMode.system,
+      themeMode: dark ? ThemeMode.dark : ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("TODO: Make a website"),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.orange
+      ),
+      home: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text("TODO: Make a website"),
+          Container(height: 5),
+          Text.rich(
+            TextSpan(
+              text: "SWAssistant for Web",
+              style: const TextStyle(
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.blueAccent
+              ),
+              recognizer: link,
+            )
+          ),
+          Container(height: 5),
+          ElevatedButton(
+            onPressed: () => setState(() => dark = !dark),
+            child: dark ? const Text("Light Mode") : const Text("Dark Mode")
+          )
+        ],
       ),
     );
   }
