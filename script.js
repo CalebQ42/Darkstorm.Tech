@@ -14,3 +14,7 @@ function switchMode(){
         document.getElementById("themeButton").innerText = "Dark Mode"
     }
 }
+
+function doStuff(){
+    alert("This is a TEST. STOP CLICKING THINGS THAT AREN'T MEANT TO BE CLICKED")
+}
