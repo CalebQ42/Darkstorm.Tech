@@ -1,8 +1,18 @@
-.header{
+*{
+    margin: 0px;
+    inset: 0px;
+}
+
+#header{
     text-align: center;
     position:sticky;
     background-color: gray;
     border-radius: 5px;
+    margin: 10px;
+}
+
+#footer{
+    padding: 10px;
 }
 
 /* .footer{
