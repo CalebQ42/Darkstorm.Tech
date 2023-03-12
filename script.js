@@ -1,4 +1,5 @@
 function onLoad(){
+    window.theme
     resizeContentSpace()
 }
 
@@ -8,10 +9,10 @@ function switchMode(){
     darkMode = !darkMode
     if (darkMode){
         document.getElementById("styleLink").setAttribute("href", "dark-mode.css")
-        document.getElementById("themeButton").innerText = "Light Mode"
+        document.getElementById("theme").innerText = "Light Mode"
     }else{
         document.getElementById("styleLink").setAttribute("href", "light-mode.css")
-        document.getElementById("themeButton").innerText = "Dark Mode"
+        document.getElementById("theme").innerText = "Dark Mode"
     }
 }
 
@@ -24,7 +25,7 @@ function resizeContentSpace(){
     if(conHeight < window.innerHeight) {
         document.getElementById("spacer")?.setAttribute("style", "height:"+(window.innerHeight - conHeight)+"px")
     }else{
-        document.getElementById("spacer")?.setAttribute("style", "height:10px")
+        document.getElementById("spacer")?.setAttribute("style", "height:0px")
     }
 }
 
