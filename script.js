@@ -16,10 +16,6 @@ function switchMode(){
     }
 }
 
-function doStuff(){
-    alert("This is a TEST. STOP CLICKING THINGS THAT AREN'T MEANT TO BE CLICKED")
-}
-
 function resizeContentSpace(){
     let conHeight = getTotalHeight("header") + getTotalHeight("footer") + getTotalHeight("content")
     if(conHeight < window.innerHeight) {
