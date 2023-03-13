@@ -1,3 +1,5 @@
+// @ts-check
+
 function onLoad(){
     resizeContentSpace()
 }
@@ -6,12 +8,17 @@ var darkMode = true;
 
 function switchMode(){
     darkMode = !darkMode
+    var styl = document.getElementById("styleLink")
+    var them = document.getElementById("theme")
+    if(them == null){
+        return
+    }
     if (darkMode){
-        document.getElementById("styleLink").setAttribute("href", "dark-mode.css")
-        document.getElementById("theme").innerText = "Light Mode"
+        styl?.setAttribute("href", "dark-mode.css")
+        them.innerText = "Light Mode"
     }else{
-        document.getElementById("styleLink").setAttribute("href", "light-mode.css")
-        document.getElementById("theme").innerText = "Dark Mode"
+        styl?.setAttribute("href", "light-mode.css")
+        them.innerText = "Dark Mode"
     }
 }
 
