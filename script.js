@@ -4,7 +4,7 @@ function onLoad(){
     resizeContentSpace()
 }
 
-var darkMode = true;
+var darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
 
 function switchMode(){
     darkMode = !darkMode
