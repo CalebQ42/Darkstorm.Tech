@@ -1,5 +1,4 @@
 function onLoad(){
-    window.theme
     resizeContentSpace()
 }
 
