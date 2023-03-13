@@ -1,25 +1,33 @@
 // @ts-check
 
 function onLoad(){
+    setTheme(darkMode)
     resizeContentSpace()
 }
 
 var darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
 
-function switchMode(){
-    darkMode = !darkMode
+/**
+ * @param {boolean} dark
+ */
+function setTheme(dark){
     var styl = document.getElementById("styleLink")
     var them = document.getElementById("theme")
     if(them == null){
         return
     }
-    if (darkMode){
+    if (dark){
         styl?.setAttribute("href", "dark-mode.css")
         them.innerText = "Light Mode"
     }else{
         styl?.setAttribute("href", "light-mode.css")
         them.innerText = "Dark Mode"
     }
+}
+
+function swapTheme(){
+    darkMode = !darkMode
+    setTheme(darkMode)
 }
 
 function resizeContentSpace(){
