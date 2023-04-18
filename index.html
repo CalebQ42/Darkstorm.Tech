@@ -5,17 +5,26 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="style.css" rel="stylesheet"/>
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link id="styleLink" rel="stylesheet"/>
     <script src="script.js"></script>
 </head>
 <body onload="onLoad()" onresize="resizeContentSpace()">
     <div id="header">
+        <button id="sidebarOpen" class="material-symbols-outlined" onclick="sidebarExtend()">
+            menu
+        </button>
         <h2>Darkstorm.Tech</h2>
+        <h4>A nerd doing nerd things</h4>
     </div>
     <div id="content">
-        Welcome!
     </div>
     <div id="spacer"></div>
+    <div id="cover" onclick="coverClick()"></div>
+    <div id="sidebar">
+        Hello there
+    </div>
     <div id="footer">
         <button id="theme" onclick="swapTheme()"></button>
         <a href="https://github.com/CalebQ42">Github</a>
