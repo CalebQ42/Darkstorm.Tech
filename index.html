@@ -4,14 +4,14 @@
         Hello there!
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link id="styleLink" rel="stylesheet"/>
     <link href="style.css" rel="stylesheet"/>
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link id="styleLink" rel="stylesheet"/>
     <script src="script.js"></script>
 </head>
 <body onload="onLoad()" onresize="resizeContentSpace()">
-    <div id="header">
+    <div id="header" class="coloredSection">
         <button id="sidebarOpen" class="material-symbols-outlined" onclick="sidebarExtend()">
             menu
         </button>
@@ -22,13 +22,29 @@
     </div>
     <div id="spacer"></div>
     <div id="cover" onclick="coverClick()"></div>
-    <div id="sidebar">
-        Hello there
+    <div id="sidebar" class="coloredSection">
+        <h2 class="sidebarHeading">Web Apps</h2>
+        <div class="sidebarSeperator"></div>
+        <p class="sidebarLinks">
+            <a class="sidebarLinks" href="SWAssistant">SWAssistant</a>
+        </p>
+        <p class="sidebarLinks">
+            <a class="sidebarLinks">CDR (Coming Soon-ish)</a>
+        </p>
+        <h2 class="sidebarHeading notFirstHeading">Links</h2>
+        <div class="sidebarSeperator"></div>
+        <p class="sidebarLinks">
+            <a class="sidebarLinks" href="files">Misc. Files</a>
+        </p>
+        <p class="sidebarLinks">
+            <a class="sidebarLinks" href="https://github.com/CalebQ42/Darkstorm.tech">This page</a>
+        </p>
+        <p class="sidebarLinks">
+            <a class="sidebarLinks" href="https://github.com/CalebQ42">My Github</a>
+        </p>
     </div>
     <div id="footer">
         <button id="theme" onclick="swapTheme()"></button>
-        <a href="https://github.com/CalebQ42">Github</a>
-        <a href="SWAssistant">SWAssistant</a>
-        <a href="files">Files</a>
+        <a href="PRIVACY.html">Privacy Policy</a>
     </div>
 </body>

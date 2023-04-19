@@ -4,12 +4,22 @@
     overflow: hidden;
 }
 
+button{
+    cursor: pointer;
+}
+
 #header{
     text-align: center;
     position: sticky;
-    background-color: gray;
-    border-radius: 0px 0px 0px 0px;
-    padding: 10px;
+    background-color: #006b5a;
+    border-radius: 10px 10px 10px 10px;
+    margin: 20px;
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 20px;
+}
+
+.coloredSection{
+    color: white;
 }
 
 #content{
@@ -43,11 +53,32 @@
     left: 100%;
     width: 300px;
     height: calc(100% - 60px);
-    background-color: gray;
+    background-color: #006b5a;
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px;
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.sidebarSeperator{
+    height: 2px;
+    background-color: #7595ac;
+    width: calc(inherit - 20px);
+    margin: 20px 10px 20px 10px;
+}
+
+.sidebarHeading{
+    margin-left: 10px;
+}
+
+.notFirstHeading{
+    margin-top: 20px;
+}
+
+.sidebarLinks{
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
 }
 
 #cover{

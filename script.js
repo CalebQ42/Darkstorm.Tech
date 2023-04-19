@@ -48,14 +48,14 @@ function sidebarExtend(){
     }
     if(!sidebarExtended){
         sidebarExtended = true
-        sidebar.animate([{left: sidebar.getAttribute("left")}, {left: (window.innerWidth - getTotalWidth("sidebar"))+"px"}], 300).onfinish = () =>
-            sidebar?.setAttribute("style", "left:" + (window.innerWidth - getTotalWidth("sidebar"))+"px")
+        sidebar.animate([{left: sidebar.getAttribute("left")}, {left: "calc(100% - " + getTotalWidth("sidebar") + "px)"}], 300).onfinish = () =>
+            sidebar?.setAttribute("style", "left: calc(100% - " + getTotalWidth("sidebar") + "px)")
         cover.animate([{opacity: cover.getAttribute("opacity"), visibility: "visible"}, {opacity: "20%"}], 300).onfinish = () =>
             cover?.setAttribute("style", "visibility: visible; opacity: 20%")
     }else{
         sidebarExtended = false;
-        sidebar.animate([{left: sidebar.getAttribute("left")}, {left: window.innerWidth + "px"}], 300).onfinish = () =>
-            sidebar?.setAttribute("style", "left:" + window.innerWidth + "px")
+        sidebar.animate([{left: sidebar.getAttribute("left")}, {left: "100%"}], 300).onfinish = () =>
+            sidebar?.setAttribute("style", "left: 100%")
         cover.animate([{opacity: cover.getAttribute("opacity")}, {opacity: "0%"}], 300).onfinish = () =>
             cover?.setAttribute("style", "visibility: hidden; opacity: 0%")
     }
