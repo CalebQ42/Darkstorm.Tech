@@ -3,9 +3,10 @@
 function onLoad(){
     setTheme(darkMode)
     resizeContentSpace()
+    // console.log(window.location.href)
 }
 
-var darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+var darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches ?? true
 var sidebarExtended = false
 
 /**
