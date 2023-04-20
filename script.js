@@ -3,7 +3,7 @@
 function onLoad(){
     setTheme(darkMode)
     resizeContentSpace()
-    // console.log(window.location.href)
+    getPage()
 }
 
 var darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches ?? true
@@ -19,10 +19,10 @@ function setTheme(dark){
         return
     }
     if (dark){
-        styl?.setAttribute("href", "dark-mode.css")
+        styl?.setAttribute("href", "https://darkstorm.tech/dark-mode.css")
         them.innerText = "Light Mode"
     }else{
-        styl?.setAttribute("href", "light-mode.css")
+        styl?.setAttribute("href", "https://darkstorm.tech/light-mode.css")
         them.innerText = "Dark Mode"
     }
 }
@@ -96,4 +96,21 @@ function getTotalWidth(id){
     width += parseInt(sty.marginLeft)
     width += parseInt(sty.marginRight)
     return width
+}
+
+function getPage(){
+    var content = document.getElementById("content")
+    if(content == null){
+        return
+    }
+    var loc = window.location.pathname
+    if(loc.startsWith("/")){
+        loc = loc.substring(1)
+    }
+    window.fetch("https://api.darkstorm.tech/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9&page=" + loc).then(async (resp) => {
+        if(resp.ok){
+            var txt = await resp.text()
+            console.log(txt)
+        }
+    })
 }
