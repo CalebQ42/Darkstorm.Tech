@@ -107,10 +107,16 @@ function getPage(){
     if(loc.startsWith("/")){
         loc = loc.substring(1)
     }
-    window.fetch("https://api.darkstorm.tech/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9&page=" + loc).then(async (resp) => {
+    if(loc == ""){
+        loc = "default"
+    }
+    window.fetch("https://api.darkstorm.tech/page/" + loc + "/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9").then(async (resp) => {
         if(resp.ok){
             var txt = await resp.text()
-            console.log(txt)
+            if(content?.innerHTML != undefined){
+                content.innerHTML = txt
+                resizeContentSpace()
+            }
         }
     })
 }
