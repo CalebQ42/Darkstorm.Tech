@@ -2,7 +2,6 @@
 
 function onLoad(){
     setTheme(darkMode)
-    resizeContentSpace()
     getPage()
 }
 
@@ -30,15 +29,6 @@ function setTheme(dark){
 function swapTheme(){
     darkMode = !darkMode
     setTheme(darkMode)
-}
-
-function resizeContentSpace(){
-    let conHeight = getTotalHeight("header") + getTotalHeight("footer") + getTotalHeight("content")
-    if(conHeight < window.innerHeight) {
-        document.getElementById("spacer")?.setAttribute("style", "height:"+(window.innerHeight - conHeight)+"px")
-    }else{
-        document.getElementById("spacer")?.setAttribute("style", "height:0px")
-    }
 }
 
 function sidebarExtend(){
@@ -115,7 +105,6 @@ function getPage(){
             var txt = await resp.text()
             if(content?.innerHTML != undefined){
                 content.innerHTML = txt
-                resizeContentSpace()
             }
         }
     })

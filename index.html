@@ -12,40 +12,42 @@
     <script src="https://darkstorm.tech/script.js"></script>
 </head>
 <body onload="onLoad()" onresize="resizeContentSpace()">
-    <div id="header" class="coloredSection">
-        <button id="sidebarOpen" class="material-symbols-outlined" onclick="sidebarExtend()">
-            menu
-        </button>
-        <h2>Darkstorm.Tech</h2>
-        <h4>A nerd doing nerd things</h4>
+    <div id="main">
+        <div id="header" class="coloredSection">
+            <button id="sidebarOpen" class="material-symbols-outlined" onclick="sidebarExtend()">
+                menu
+            </button>
+            <h2>Darkstorm.Tech</h2>
+            <h4>A nerd doing nerd things</h4>
+        </div>
+        <div id="content"></div>
+        <div id="footer">
+            <button id="theme" onclick="swapTheme()">Light Mode</button>
+            <a href="https://darkstorm.tech/PRIVACY.html">Privacy Policy</a>
+        </div>
     </div>
-    <div id="content">
-    </div>
-    <div id="spacer" style="height: 90%"></div>
     <div id="cover" onclick="coverClick()"></div>
     <div id="sidebar" class="coloredSection">
-        <h2 class="sidebarHeading">Web Apps</h2>
-        <div class="sidebarSeperator"></div>
-        <p class="sidebarLinks">
-            <a class="sidebarLinks" href="https://darkstorm.tech/SWAssistant">SWAssistant</a>
-        </p>
-        <p class="sidebarLinks">
-            <a class="sidebarLinks">CDR (Coming Soon-ish)</a>
-        </p>
-        <h2 class="sidebarHeading notFirstHeading">Links</h2>
-        <div class="sidebarSeperator"></div>
-        <p class="sidebarLinks">
-            <a class="sidebarLinks" href="https://darkstorm.tech/files">Misc. Files</a>
-        </p>
-        <p class="sidebarLinks">
-            <a class="sidebarLinks" href="https://github.com/CalebQ42/Darkstorm.tech">This page</a>
-        </p>
-        <p class="sidebarLinks">
-            <a class="sidebarLinks" href="https://github.com/CalebQ42">My Github</a>
-        </p>
-    </div>
-    <div id="footer">
-        <button id="theme" onclick="swapTheme()">Light Mode</button>
-        <a href="https://darkstorm.tech/PRIVACY.html">Privacy Policy</a>
+        <div style="padding:10px">
+            <h2 class="sidebarHeading">Web Apps</h2>
+            <div class="sidebarSeperator"></div>
+            <p class="sidebarLinks">
+                <a class="sidebarLinks" href="https://darkstorm.tech/SWAssistant">SWAssistant</a>
+            </p>
+            <p class="sidebarLinks">
+                <a class="sidebarLinks">CDR (Coming Soon-ish)</a>
+            </p>
+            <h2 class="sidebarHeading notFirstHeading">Links</h2>
+            <div class="sidebarSeperator"></div>
+            <p class="sidebarLinks">
+                <a class="sidebarLinks" href="https://darkstorm.tech/files">Misc. Files</a>
+            </p>
+            <p class="sidebarLinks">
+                <a class="sidebarLinks" href="https://github.com/CalebQ42/Darkstorm.tech">This page</a>
+            </p>
+            <p class="sidebarLinks">
+                <a class="sidebarLinks" href="https://github.com/CalebQ42">My Github</a>
+            </p>
+        </div>
     </div>
 </body>
