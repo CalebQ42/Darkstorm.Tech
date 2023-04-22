@@ -19,6 +19,7 @@ ul{
 
 .coloredSection{
     color: white;
+    background-color: #006b5a;
 }
 
 #main{
@@ -30,7 +31,6 @@ ul{
 #header{
     text-align: center;
     position: sticky;
-    background-color: #006b5a;
     box-shadow: 0px 0px 10px 0px black;
     padding: 20px;
     flex-shrink: 0;
@@ -75,7 +75,6 @@ ul{
     left: 100%;
     width: 400px;
     height: 100%;
-    background-color: #006b5a;
     margin: 0px 0px 0px 0px;
     box-shadow: 0px 0px 10px 0px black;
 }
