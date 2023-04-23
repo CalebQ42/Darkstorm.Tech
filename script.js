@@ -100,7 +100,7 @@ function getPage(){
     if(loc == ""){
         loc = "default"
     }
-    window.fetch("https://api.darkstorm.tech/page/" + loc + "/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9").then(async (resp) => {
+    window.fetch("https://api.darkstorm.tech/data/" + loc + "/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9").then(async (resp) => {
         if(resp.ok){
             var txt = await resp.text()
             if(content?.innerHTML != undefined){
