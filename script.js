@@ -4,10 +4,10 @@ var darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches ?? true
 var sidebarExtended = false
 
 function onLoad(){
+    setToPath(window.location.pathname, false)
     if(!darkMode){
         setTheme()
     }
-    setToPath(window.location.pathname, false)
     setSidebarWidth()
     window.addEventListener("popstate", () => setToPath(window.location.pathname, false))
 }
@@ -73,7 +73,7 @@ async function expandSidebar(){
 * @param {string} path
 * @param {boolean} addToHistory
 */
-async function setToPath(path, addToHistory = true){
+function setToPath(path, addToHistory = true){
     if(sidebarExtended){
         expandSidebar()
     }
@@ -87,6 +87,7 @@ async function setToPath(path, addToHistory = true){
         path = "default"
     }
     setContent("https://api.darkstorm.tech/page/" + path + "/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9", path, addToHistory)
+    return false
 }
 
 /**

@@ -40,6 +40,22 @@ a{
     text-align: center;
 }
 
+#sidebarContent p{
+    margin-bottom: 10px;
+}
+
+#sidebarContent h2{
+    text-align: left;
+}
+
+.sidebarSeparator{
+    margin-right: 20px;
+    background-color: #7c968e;
+    height: 2px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
 .sidebarButton{
     height: 50px;
     width: 50px;
