@@ -108,17 +108,17 @@ async function setContent(url, path, addToHistory = true){
             return
         }
         content.innerHTML = await resp.text()
-        if(path == "resume") setupResumeSelector()
+        if(path == "portfolio") setupPortfolioSelector()
     })
 }
 
-async function setupResumeSelector(){
+async function setupPortfolioSelector(){
     var sel = document.getElementById("langSelect")
     if(sel == null){
         return
     }
     sel.addEventListener("change", () => {
         // @ts-ignore
-        setContent("https://api.darkstorm.tech/page/resume/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9&lang=" + sel.value, "resume", false)
+        setContent("https://api.darkstorm.tech/page/portfolio/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9&lang=" + sel.value, "portfolio", false)
     })
 }
