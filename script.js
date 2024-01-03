@@ -86,7 +86,7 @@ function setToPath(path, addToHistory = true){
     if(path == ""){
         path = "default"
     }
-    setContent("https://api.darkstorm.tech/page/" + path + "/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9", path, addToHistory)
+    setContent("https://api.darkstorm.tech/page/" + path, path, addToHistory)
     return false
 }
 
@@ -107,7 +107,11 @@ async function setContent(url, path, addToHistory = true){
         if(content == null){
             return
         }
-        content.innerHTML = await resp.text()
+        var txt = await resp.text()
+        var json = JSON.parse(txt)
+        content.innerHTML = json.content
+        document.title = json.title
+        document.getElementById("favicon")?.setAttribute("href", json.favicon)
         if(path == "portfolio") setupPortfolioSelector()
     })
 }
@@ -119,6 +123,6 @@ async function setupPortfolioSelector(){
     }
     sel.addEventListener("change", () => {
         // @ts-ignore
-        setContent("https://api.darkstorm.tech/page/portfolio/?key=d5ca268e-5f83-4003-adfc-26b9e6bb47c9&lang=" + sel.value, "portfolio", false)
+        setContent("https://api.darkstorm.tech/page/portfolio/?lang=" + sel.value, "portfolio", false)
     })
 }
