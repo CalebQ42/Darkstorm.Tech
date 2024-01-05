@@ -7,6 +7,18 @@ a{
     color: lightgray;
 }
 
+input{
+    background-color: #505050;
+    border-color: gray;
+    caret-color: lightgray;
+}
+
+#login{
+    background-color: #505050;
+    color: lightgray;
+    border-width: 0;
+}
+
 #theme{
     background-color: white;
 }
