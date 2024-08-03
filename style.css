@@ -1,27 +1,28 @@
-*{
+* {
     margin: 0px;
 }
 
-body, html{
+body,
+html {
     height: 100%;
     width: 100%;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-ul{
+ul {
     list-style: circle;
     margin: 10px 0px 10px 0px;
 }
 
-a{
+a {
     text-decoration: underline;
     cursor: pointer;
 }
 
-input{
+input {
     border-radius: 3px;
     border-width: 1;
     width: 100%;
@@ -29,21 +30,21 @@ input{
     font-size: 25px;
 }
 
-label{
+label {
     font-size: 18px;
 }
 
-#login{
+#login {
     font-size: 15px;
 }
 
-.elevated{
+.elevated {
     background-color: #006b5a;
     color: white;
     box-shadow: 0px 0px 10px 0px black;
 }
 
-#sidebar{
+#sidebar {
     position: fixed;
     right: 0px;
     height: 100%;
@@ -51,20 +52,20 @@ label{
     z-index: 2;
 }
 
-#sidebarContent{
+#sidebarContent {
     padding: 10px;
     text-align: center;
 }
 
-#sidebarContent p{
+#sidebarContent p {
     margin-bottom: 10px;
 }
 
-#sidebarContent h2{
+#sidebarContent h2 {
     text-align: left;
 }
 
-.sidebarSeparator{
+.sidebarSeparator {
     margin-right: 20px;
     background-color: #7c968e;
     height: 2px;
@@ -72,7 +73,7 @@ label{
     margin-bottom: 10px;
 }
 
-.sidebarButton{
+.sidebarButton {
     height: 50px;
     width: 50px;
     color: white;
@@ -82,13 +83,13 @@ label{
     background-color: transparent;
 }
 
-#headerButton{
+#headerButton {
     position: absolute;
     right: 0px;
     top: calc(50% - 25px);
 }
 
-#sidebarCover{
+#sidebarCover {
     position: fixed;
     background-color: black;
     opacity: 0%;
@@ -98,7 +99,7 @@ label{
     width: 100%;
 }
 
-#main{
+#main {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -106,38 +107,58 @@ label{
     z-index: 0;
 }
 
-#header{
+#header {
     text-align: center;
     position: sticky;
     padding: 20px;
     flex-shrink: 0;
 }
 
-#content{
+#content {
     padding: 10px;
     max-width: 800px;
     margin: auto;
     flex: 1 0 auto;
 }
 
-#content p{
+#content p {
     margin-bottom: 10px;
 }
 
-#footer{
+#footer {
     padding: 10px;
     flex-shrink: 0;
     background-color: black;
 }
 
-#footer a{
+#footer a {
     color: white;
 }
 
-#themeButton{
+#themeButton {
     border: 0;
     border-radius: 20px;
     padding: 5px 10px 5px 10px;
     float: inline-end;
     align-self: center;
+}
+
+.author-pic {
+    width: 100px;
+}
+
+.blog {
+    margin-top: 20px;
+}
+
+/* .blog-time {
+    margin-bottom: 20px;
+} */
+
+.about-me-header {
+    margin-bottom: -5px;
+}
+
+.my-projects-header {
+    margin-bottom: 15px;
 }
