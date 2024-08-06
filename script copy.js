@@ -102,7 +102,7 @@ function setToPath(path, addToHistory = true) {
 		path = "default";
 	}
 	setContent(
-		"https://darkstorm.tech/" + path + "?contentOnly=true",
+		"https://darkstorm.tech/blog/" + path + "?contentOnly=true",
 		path,
 		addToHistory,
 	);
@@ -126,8 +126,7 @@ async function setContent(url, path, addToHistory = true) {
 		if (content == null) {
 			return;
 		}
-		var txt = await resp.text();
-		var json = JSON.parse(txt);
+		var json = JSON.parse(await resp.text());
 		content.innerHTML = json.content;
 		document.title = json.title ?? "Darkstorm.tech";
 		document
