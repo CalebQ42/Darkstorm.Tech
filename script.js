@@ -98,9 +98,6 @@ function setToPath(path, addToHistory = true) {
 	if (path.endsWith("/")) {
 		path = path.substring(0, path.length - 1);
 	}
-	if (path == "") {
-		path = "default";
-	}
 	setContent(
 		"https://darkstorm.tech/" + path + "?contentOnly=true",
 		path,
@@ -116,10 +113,7 @@ function setToPath(path, addToHistory = true) {
  */
 async function setContent(url, path, addToHistory = true) {
 	if (addToHistory) {
-		if (path == "default") {
-			path = "";
-		}
-		history.pushState(path, "", path);
+		history.pushState(path, "", "https://darkstorm.tech/" + path);
 	}
 	window.fetch(url).then(async (resp) => {
 		var content = document.getElementById("content");
