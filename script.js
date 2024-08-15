@@ -123,12 +123,13 @@ async function setContent(url, path, addToHistory = true) {
 		var txt = await resp.text();
 		var json = JSON.parse(txt);
 		content.innerHTML = json.content;
-		document.title = json.title ?? "Darkstorm.tech";
+
+		document.title = !json.title ? "Darkstorm.tech" : json.title;
 		document
 			.getElementById("favicon")
 			?.setAttribute(
 				"href",
-				json.favicon ?? "https://darkstorm.tech/favicon.png",
+				!json.favicon ? "https://darkstorm.tech/favicon.png" : json.favicon,
 			);
 		if (path == "portfolio") setupPortfolioSelector();
 	});
