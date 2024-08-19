@@ -34,6 +34,19 @@ label {
 	font-size: 18px;
 }
 
+blockquote {
+	/* This is taken directly from Github's formatting*/
+	border-left: 0.25em solid var(--color-border-default);
+}
+
+iframe,
+img {
+	/*Also taken from Github's formatting*/
+	border-style: none;
+	max-width: 100%;
+	box-sizing: content-box;
+}
+
 #header-title {
 	cursor: pointer;
 }
