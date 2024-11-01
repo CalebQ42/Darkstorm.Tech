@@ -1,177 +1,177 @@
 * {
-	margin: 0px;
+  margin: 0px;
 }
 
 body,
 html {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 ul {
-	list-style: circle;
-	margin: 10px 0px 10px 0px;
+  list-style: circle;
+  margin: 10px 0px 10px 0px;
 }
 
 a {
-	text-decoration: underline;
-	cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 input {
-	border-radius: 3px;
-	border-width: 1;
-	width: 100%;
-	max-width: 250px;
-	font-size: 25px;
+  border-radius: 3px;
+  border-width: 1;
+  width: 100%;
+  max-width: 250px;
+  font-size: 25px;
 }
 
 label {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 blockquote {
-	/* This is taken directly from Github's formatting*/
-	border-left: 0.25em solid var(--color-border-default);
+  /* This is taken directly from Github's formatting*/
+  border-left: 0.25em solid var(--color-border-default);
 }
 
 iframe,
 img {
-	/*Also taken from Github's formatting*/
-	border-style: none;
-	max-width: 100%;
-	box-sizing: content-box;
+  /*Also taken from Github's formatting*/
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
 }
 
 .files-link {
-	padding: 5px 0px;
-	width: 100%;
+  padding: 5px 0px;
+  width: 100%;
 }
 
 #header-title {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 #login {
-	font-size: 15px;
+  font-size: 15px;
 }
 
 .elevated {
-	background-color: #006b5a;
-	color: white;
-	box-shadow: 0px 0px 10px 0px black;
+  background-color: #006b5a;
+  color: white;
+  box-shadow: 0px 0px 10px 0px black;
 }
 
 #sidebar {
-	position: fixed;
-	right: 0px;
-	height: 100%;
-	width: 0px;
-	z-index: 2;
+  position: fixed;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: 2;
 }
 
 #sidebarContent {
-	padding: 10px;
-	text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 
 #sidebarContent p {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #sidebarContent h2 {
-	text-align: left;
+  text-align: left;
 }
 
 .sidebarSeparator {
-	margin-right: 20px;
-	background-color: #7c968e;
-	height: 2px;
-	border-radius: 2px;
-	margin-bottom: 10px;
+  margin-right: 20px;
+  background-color: #7c968e;
+  height: 2px;
+  border-radius: 2px;
+  margin-bottom: 10px;
 }
 
 .sidebarButton {
-	height: 50px;
-	width: 50px;
-	color: white;
-	border: 0;
-	align-self: center;
-	vertical-align: middle;
-	background-color: transparent;
+  height: 50px;
+  width: 50px;
+  color: white;
+  border: 0;
+  align-self: center;
+  vertical-align: middle;
+  background-color: transparent;
 }
 
 #headerButton {
-	position: absolute;
-	right: 0px;
-	top: calc(50% - 25px);
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 25px);
 }
 
 #sidebarCover {
-	position: fixed;
-	background-color: black;
-	opacity: 0%;
-	visibility: hidden;
-	z-index: 1;
-	height: 100%;
-	width: 100%;
+  position: fixed;
+  background-color: black;
+  opacity: 0%;
+  visibility: hidden;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
 }
 
 #main {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	z-index: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 0;
 }
 
 #header {
-	text-align: center;
-	position: sticky;
-	padding: 20px;
-	flex-shrink: 0;
+  text-align: center;
+  position: sticky;
+  padding: 20px;
+  flex-shrink: 0;
 }
 
 #content {
-	padding: 10px 2.5%;
-	max-width: 800px;
-	width: min(95%, 800px);
-	margin: auto;
-	flex: 1 0 auto;
+  padding: 10px 2.5%;
+  max-width: 800px;
+  width: min(95%, 800px);
+  margin: auto;
+  flex: 1 0 auto;
 }
 
 #content p {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #footer {
-	padding: 10px;
-	flex-shrink: 0;
-	background-color: black;
+  padding: 10px;
+  flex-shrink: 0;
+  background-color: black;
 }
 
 #footer a {
-	color: white;
+  color: white;
 }
 
 #themeButton {
-	border: 0;
-	border-radius: 20px;
-	padding: 5px 10px 5px 10px;
-	float: inline-end;
-	align-self: center;
+  border: 0;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  float: inline-end;
+  align-self: center;
 }
 
 .author-pic {
-	width: 100px;
+  width: 100px;
 }
 
 .blog {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* .blog-time {
@@ -179,9 +179,9 @@ img {
 } */
 
 .about-me-header {
-	margin-bottom: -5px;
+  margin-bottom: -5px;
 }
 
 .my-projects-header {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
