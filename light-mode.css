@@ -1,12 +1,20 @@
-a{
-    color: #1f1f1f;
+a {
+  color: #1f1f1f;
 }
 
-#theme{
-    background-color: black;
-    color: white;
+#theme {
+  background-color: black;
+  color: white;
 }
 
-#footer{
-    background-color: lightgray;
+#footer {
+  background-color: lightgray;
+}
+
+#techSelect {
+  background: transparent;
+  border-radius: 2px;
+  border: 1px solid black;
+  color: black;
+  font-size: 1em;
 }

@@ -1,51 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title><!--Title--></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="icon" id="favicon" href="<!--Favicon-->"/>
-        <link rel="stylesheet" href="https://darkstorm.tech/dark-mode.css" id="themeLink"/>
-        <link rel="stylesheet" href="https://darkstorm.tech/style.css"/>
-        <script src="https://darkstorm.tech/script.js"></script>
-        <!-- Material Icons -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    </head>
-    <body onload="onLoad()" onresize="setSidebarWidth()" on>
-        <div id="sidebar" class="elevated">
-            <div id="sidebarContent">
-                <button onclick="expandSidebar()" class="sidebarButton material-symbols-outlined">
-                    menu
-                </button>
-                <br/>
-                <div class="sidebarSeparator"></div>
-                <p><a href="https://darkstorm.tech/portfolio" onclick="return setToPath('portfolio')">Portfolio</a></p>
-                <p><a href="https://darkstorm.tech/swassistant-landing" onclick="return setToPath('swassistant-landing')">SWAssistant</a></p>
-                <p><a href="https://darkstorm.tech/cdr-landing" onclick="return setToPath('cdr-landing')">CDR</a></p>
-                <h2>PWAs</h2>
-                <div class="sidebarSeparator"></div>
-                <p><a href="https://darkstorm.tech/SWAssistant">SWAssistant</a></p>
-                <h2>Other</h2>
-                <div class="sidebarSeparator"></div>
-                <p><a href="https://github.com/CalebQ42">My Github</a></p>
-                <p><a href="https://darkstorm.tech/files" onclick="return setToPath('files')">Misc Files</a></p>
-            </div>
-        </div>
-        <div id="sidebarCover" onclick="expandSidebar()"></div>
-        <div id="main">
-            <div id="header" class="elevated">
-                <h1 id="header-title" onclick="return setToPath('')">Darkstorm.tech</h1>
-                <h4>A nerd doing nerd things</h4>
-                <button onclick="expandSidebar()" class="sidebarButton material-symbols-outlined" id="headerButton">
-                    menu
-                </button>
-            </div>
-            <div id="content">
-              <!--Content-->
-            </div>
-            <div id="footer">
-                <a href="https://darkstorm.tech/PRIVACY.html">Privacy Policy</a>
-                <button id="themeButton" onclick="swapTheme()">Light Mode</button>
-            </div>
-        </div>
-    </body>
+  <head>
+    <title><!--Title--></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="htmx-config" content='{"selfRequestsOnly":false}'>
+    <link rel="icon" id="favicon" href="<!--Favicon-->" />
+    <link
+      rel="stylesheet"
+      href="https://darkstorm.tech/dark-mode.css"
+      id="themeLink"
+    />
+    <link rel="stylesheet" href="https://darkstorm.tech/style.css" />
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <script src="https://darkstorm.tech/script.js"></script>
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body onload="onLoad()" onresize="setSidebarWidth()" on>
+    <div id="sidebar" class="elevated">
+      <div id="sidebarContent">
+        <button
+          onclick="expandSidebar()"
+          class="sidebarButton material-symbols-outlined"
+        >
+          menu
+        </button>
+        <br />
+        <div class="sidebarSeparator"></div>
+        <p>
+          <a
+            href="https://darkstorm.tech/portfolio"
+            hx-get="/portfolio"
+            hx-target="#content"
+            hx-push-url="true"
+            onClick="expandSidebar()"
+            >Portfolio</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://darkstorm.tech/swassistant-landing"
+            hx-get="/swassistant-landing"
+            hx-target="#content"
+            hx-push-url="true"
+            onClick="expandSidebar()"
+            >SWAssistant</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://darkstorm.tech/cdr-landing"
+            hx-get="/cdr-landing"
+            hx-target="#content"
+            hx-push-url="true"
+            onClick="expandSidebar()"
+            >CDR</a
+          >
+        </p>
+        <h2>PWAs</h2>
+        <div class="sidebarSeparator"></div>
+        <p><a href="https://darkstorm.tech/SWAssistant">SWAssistant</a></p>
+        <h2>Other</h2>
+        <div class="sidebarSeparator"></div>
+        <p><a href="https://github.com/CalebQ42">My Github</a></p>
+        <p>
+          <a
+            href="https://darkstorm.tech/files"
+            hx-get="/files"
+            hx-target="#content"
+            hx-push-url="true"
+            onClick="expandSidebar()"
+            >Misc Files</a
+          >
+        </p>
+      </div>
+    </div>
+    <div id="sidebarCover" onclick="expandSidebar()"></div>
+    <div id="main">
+      <div id="header" class="elevated">
+        <h1 id="header-title" hx-get="/" hx-target="#content" hx-push-url="true">Darkstorm.tech</h1>
+        <h4>A nerd doing nerd things</h4>
+        <button
+          onclick="expandSidebar()"
+          class="sidebarButton material-symbols-outlined"
+          id="headerButton"
+        >
+          menu
+        </button>
+      </div>
+      <div id="content">
+        <!--Content-->
+      </div>
+      <div id="footer">
+        <a href="https://darkstorm.tech/PRIVACY.html">Privacy Policy</a>
+        <button id="themeButton" onclick="swapTheme()">Light Mode</button>
+      </div>
+    </div>
+  </body>
 </html>
