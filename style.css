@@ -185,3 +185,11 @@ img {
 .my-projects-header {
   margin-bottom: 15px;
 }
+
+.vertical-seperator {
+  display: inline-block;
+  inline-size: 1px;
+  background-color: gray;
+  height: 1em;
+  margin: 0 5px -2px 5px;
+}

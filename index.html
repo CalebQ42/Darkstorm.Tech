@@ -31,6 +31,14 @@
         <br />
         <div class="sidebarSeparator"></div>
         <p>
+          <a href="https://darkstorm.tech/list"
+            hx-get="/list"
+            hx-target="#content"
+            hx-push-url="true"
+            onClick="expandSidebar()"
+          >All Blogs</a>
+        </p>
+        <p>
           <a
             href="https://darkstorm.tech/portfolio"
             hx-get="/portfolio"
@@ -96,6 +104,7 @@
       </div>
       <div id="footer">
         <a href="https://darkstorm.tech/PRIVACY.html">Privacy Policy</a>
+        <span class="vertical-seperator"></span>
         Powered by: <a href="https://htmx.org/">HTMX</a>
         <button id="themeButton" onclick="swapTheme()">Light Mode</button>
       </div>
