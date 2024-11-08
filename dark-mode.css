@@ -1,36 +1,41 @@
 body {
-  background-color: #1f1f1f;
-  color: white;
+	background-color: #1f1f1f;
+	color: white;
 }
 
 a {
-  color: lightgray;
+	color: lightgray;
 }
 
 input {
-  background-color: #505050;
-  border-color: gray;
-  caret-color: lightgray;
+	background-color: #505050;
+	border-color: gray;
+	caret-color: lightgray;
+	color: white;
+}
+
+input:focus {
+	border-color: white;
 }
 
 #login {
-  background-color: #505050;
-  color: lightgray;
-  border-width: 0;
+	background-color: #505050;
+	color: lightgray;
+	border-width: 0;
 }
 
 #theme {
-  background-color: white;
+	background-color: white;
 }
 
 #footer {
-  background-color: black;
+	background-color: black;
 }
 
 #techSelect {
-  background: transparent;
-  border-radius: 2px;
-  border: 1px solid white;
-  color: white;
-  font-size: 1em;
+	background: transparent;
+	border-radius: 2px;
+	border: 1px solid white;
+	color: white;
+	font-size: 1em;
 }

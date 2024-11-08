@@ -1,20 +1,29 @@
 a {
-  color: #1f1f1f;
+	color: #1f1f1f;
 }
 
 #theme {
-  background-color: black;
-  color: white;
+	background-color: black;
+	color: white;
 }
 
 #footer {
-  background-color: lightgray;
+	background-color: lightgray;
 }
 
 #techSelect {
-  background: transparent;
-  border-radius: 2px;
-  border: 1px solid black;
-  color: black;
-  font-size: 1em;
+	background: transparent;
+	border-radius: 2px;
+	border: 1px solid black;
+	color: black;
+	font-size: 1em;
+}
+
+input {
+	background-color: #909090;
+	border-color: gray;
+}
+
+input:focus {
+	border-color: black;
 }
