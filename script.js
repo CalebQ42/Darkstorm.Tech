@@ -1,19 +1,19 @@
-// @ts-check
-import "htmx";
-
 var darkMode =
 	window.matchMedia("(prefers-color-scheme: dark)").matches ?? true;
 var sidebarExtended = false;
+var authToken = "";
 
 function onLoad() {
 	if (!darkMode) {
 		setTheme();
 	}
 	setSidebarWidth();
-
-	// window.addEventListener("popstate", () =>
-	//   setToPath(window.location.pathname, false),
-	// );
+	document.addEventListener("htmx:configRequest", function (e) {
+		console.log(e);
+		if (e.detail.path.startsWith("https://api.darkstorm.tech") && authToken) {
+			e.detail.headers["Authorization"] = "Bearer " + authToken;
+		}
+	});
 }
 
 function setSidebarWidth() {
@@ -90,5 +90,37 @@ async function expandSidebar() {
  */
 function login(e) {
 	e.preventDefault();
-	console.log(e);
+	let u = document.getElementById("usernameInput").value;
+	let p = document.getElementById("passwordInput").value;
+	if (!u || !p) {
+		console.log("username or password invalid");
+		//TODO: show to user
+		return;
+	}
+	fetch(
+		new Request("https://api.darkstorm.tech/user/login", {
+			method: "POST",
+			body: JSON.stringify({ username: u, password: p }),
+		}),
+	)
+		.then(async (resp) => {
+			//TODO: go to editor page
+			if (resp.status != 200) {
+				//TODO: show to user
+				console.log("Something went wrong1");
+				return;
+			}
+			let res = JSON.parse(await resp.text());
+			if (!res) {
+				//TODO: show to user
+				console.log("Something went wrong2");
+				return;
+			}
+
+			htmx.ajax();
+		})
+		.catch((error) => {
+			//TODO: show to user
+			console.log(`Something went wrong3: ${error}`);
+		});
 }
