@@ -92,9 +92,8 @@ function login(e) {
 	e.preventDefault();
 	let u = document.getElementById("usernameInput").value;
 	let p = document.getElementById("passwordInput").value;
+	let error = document.getElementById("formResult");
 	if (!u || !p) {
-		console.log("username or password invalid");
-		//TODO: show to user
 		return;
 	}
 	fetch(
@@ -104,23 +103,22 @@ function login(e) {
 		}),
 	)
 		.then(async (resp) => {
+			let res = JSON.parse(await resp.text());
 			//TODO: go to editor page
 			if (resp.status != 200) {
-				//TODO: show to user
-				console.log("Something went wrong1");
+				error.innerHTML = res.errorMsg;
 				return;
 			}
-			let res = JSON.parse(await resp.text());
 			if (!res) {
-				//TODO: show to user
 				console.log("Something went wrong2");
 				return;
 			}
-
-			htmx.ajax();
+			htmx.ajax("GET", "/editor", {
+				target: "#content",
+				source: "#invisiblePusher",
+			});
 		})
 		.catch((error) => {
-			//TODO: show to user
-			console.log(`Something went wrong3: ${error}`);
+			console.log(`Something went wrong: ${error}`);
 		});
 }

@@ -217,3 +217,16 @@ img {
 	border-radius: 5px;
 	padding: 5px 10px;
 }
+
+/* @keyframes heightChange {
+	0% {
+		height: 0px;
+	}
+	100% {
+		height: auto;
+	}
+} */
+
+#formResult {
+	transition: height 2s;
+}
