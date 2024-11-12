@@ -12,15 +12,25 @@
 		/>
 		<link rel="stylesheet" href="https://darkstorm.tech/style.css" />
 		<script src="https://darkstorm.tech/script.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css?family=Noto Sans"
+			rel="stylesheet"
+		/>
 		<script src="https://unpkg.com/htmx.org@2.0.3"></script>
 		<!-- Material Icons -->
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
 		/>
+		<!-- Noto Sans font -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Noto Sans"
+		/>
 	</head>
-	<body onload="onLoad()" onresize="setSidebarWidth()" on>
-		<div id="sidebar" class="elevated">
+	<body onload="onLoad()" onresize="setSidebarWidth()">
+		<div id="sidebar" class="elevated"
+			hx-push-url="true" hx-target="#content">
 			<div id="sidebarContent">
 				<button
 					onclick="expandSidebar()"
@@ -34,8 +44,6 @@
 					<a
 						href="https://darkstorm.tech/list"
 						hx-get="/list"
-						hx-target="#content"
-						hx-push-url="true"
 						onClick="expandSidebar()"
 						>All Blogs</a
 					>
@@ -44,8 +52,6 @@
 					<a
 						href="https://darkstorm.tech/portfolio"
 						hx-get="/portfolio"
-						hx-target="#content"
-						hx-push-url="true"
 						onClick="expandSidebar()"
 						>Portfolio</a
 					>
@@ -54,8 +60,6 @@
 					<a
 						href="https://darkstorm.tech/swassistant-landing"
 						hx-get="/swassistant-landing"
-						hx-target="#content"
-						hx-push-url="true"
 						onClick="expandSidebar()"
 						>SWAssistant</a
 					>
@@ -64,8 +68,6 @@
 					<a
 						href="https://darkstorm.tech/cdr-landing"
 						hx-get="/cdr-landing"
-						hx-target="#content"
-						hx-push-url="true"
 						onClick="expandSidebar()"
 						>CDR</a
 					>
@@ -80,8 +82,6 @@
 					<a
 						href="https://darkstorm.tech/files"
 						hx-get="/files"
-						hx-target="#content"
-						hx-push-url="true"
 						onClick="expandSidebar()"
 						>Misc Files</a
 					>
@@ -91,8 +91,6 @@
 					<a
 						href="https://darkstorm.tech/login"
 						hx-get="/login"
-						hx-target="#content"
-						hx-push-url="true"
 						onclick="expandSidebar()"
 						>Login</a
 					>

@@ -39,3 +39,14 @@ input:focus {
 	color: white;
 	font-size: 1em;
 }
+
+#loginButton {
+	color: white;
+	background-color: #303030;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+#loginButton:active {
+	background-color: black;
+}
