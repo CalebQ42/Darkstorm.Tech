@@ -79,13 +79,18 @@ img {
 
 #sidebar {
 	position: fixed;
-	right: 0px;
+	right: calc(-1 * min(100%, 400px));
 	height: 100%;
-	width: 0px;
+	width: min(100%, 400px);
 	z-index: 2;
+	transition: right 0.5s ease-in-out;
 }
 
-#sidebarContent {
+#sidebar.extended {
+	right: 0px;
+}
+
+#sidebar #sidebarContent {
 	padding: 10px;
 	text-align: center;
 }
@@ -130,6 +135,7 @@ img {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
+	transition: all 0.5s ease-in-out;
 }
 
 #main {

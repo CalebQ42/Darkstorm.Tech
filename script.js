@@ -7,21 +7,12 @@ function onLoad() {
 	if (!darkMode) {
 		setTheme();
 	}
-	setSidebarWidth();
 	document.addEventListener("htmx:configRequest", function (e) {
 		console.log(e);
 		if (e.detail.path.startsWith("https://api.darkstorm.tech") && authToken) {
 			e.detail.headers["Authorization"] = "Bearer " + authToken;
 		}
 	});
-}
-
-function setSidebarWidth() {
-	var sideContent = document.getElementById("sidebarContent");
-	if (sideContent == null) {
-		return;
-	}
-	sideContent.style.width = Math.min(window.innerWidth, 400).toString() + "px";
 }
 
 async function setTheme() {
@@ -50,37 +41,12 @@ async function expandSidebar() {
 	if (sidebar == null || cover == null) {
 		return;
 	}
-	if (!sidebarExtended) {
-		sidebarExtended = true;
-		sidebar.animate(
-			[{ width: sidebar.style.width }, { width: "min(100%, 400px)" }],
-			300,
-		).onfinish = () => {
-			if (sidebar != null) sidebar.style.width = "min(100%, 400px)";
-		};
-		cover.style.visibility = "visible";
-		cover.animate(
-			[{ opacity: cover.style.opacity }, { opacity: "40%" }],
-			300,
-		).onfinish = () => {
-			if (cover != null) cover.style.opacity = "40%";
-		};
+	if (sidebar.classList.contains("extended")) {
+		cover.style.visibility = "hidden";
+		cover.style.opacity = 0;
 	} else {
-		sidebarExtended = false;
-		sidebar.animate(
-			[{ width: sidebar.style.widows }, { width: "0px" }],
-			300,
-		).onfinish = () => {
-			if (sidebar != null) sidebar.style.width = "0px";
-		};
-		cover.animate(
-			[{ opacity: cover.style.opacity }, { opacity: "0%" }],
-			300,
-		).onfinish = () => {
-			if (cover != null) {
-				cover.style.opacity = "0%";
-				cover.style.visibility = "hidden";
-			}
-		};
+		cover.style.visibility = "visible";
+		cover.style.opacity = 0.25;
 	}
+	sidebar.classList.toggle("extended");
 }
