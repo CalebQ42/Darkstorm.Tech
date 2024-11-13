@@ -40,6 +40,14 @@
 					menu
 				</button>
 				<br />
+				<p>
+					<a
+						href="https://darkstorm.tech/"
+						hx-get="/"
+						onClick="expandSidebar()"
+						>Home</a
+					>
+				</p>
 				<div class="sidebarSeparator"></div>
 				<p>
 					<a
@@ -106,6 +114,7 @@
 					hx-get="/"
 					hx-target="#content"
 					hx-push-url="true"
+					hx-swap="swap:0.25s settle:0.25s"
 				>
 					Darkstorm.tech
 				</h1>
