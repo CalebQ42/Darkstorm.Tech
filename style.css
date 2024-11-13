@@ -63,6 +63,8 @@ img {
 
 #header-title {
 	cursor: pointer;
+	margin: auto;
+	width: min-content;
 }
 
 #login {
