@@ -8,6 +8,9 @@
 
 body,
 html {
+	max-width: 100%;
+	overflow-x: hidden;
+
 	height: 100%;
 	width: 100%;
 	font-family: "Noto Sans", Arial, Helvetica, sans-serif;
@@ -148,7 +151,21 @@ img {
 	width: min(95%, 800px);
 	margin: auto;
 	flex: 1 0 auto;
+	position: relative;
+	left: 0%;
+	opacity: 1;
+	transition: all 0.25s ease-in-out;
 }
+
+#content.htmx-swapping {
+	opacity: 0;
+	left: 50%;
+}
+
+/* #content.hxmx-settling {
+	opcacity: 1;
+	left: 0%;
+} */
 
 #content p {
 	margin-bottom: 10px;
@@ -159,6 +176,7 @@ img {
 	flex-shrink: 0;
 	background-color: black;
 	color: white;
+	transition: all 0.5s ease-in-out;
 }
 
 #footer a {
