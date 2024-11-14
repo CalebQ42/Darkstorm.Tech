@@ -18,9 +18,6 @@ function onLoad() {
 async function setTheme() {
 	var styl = document.getElementById("themeLink");
 	var them = document.getElementById("themeButton");
-	if (them == null || styl == null) {
-		return;
-	}
 	if (darkMode) {
 		styl?.setAttribute("href", "https://darkstorm.tech/dark-mode.css");
 		them.innerText = "Light Mode";
@@ -52,10 +49,7 @@ async function expandSidebar() {
 }
 
 function blogEditorResize() {
-	console.log("YODLE");
 	let elem = document.getElementById("blogEditor");
-	console.log(elem.style.height);
-	console.log(elem.scrollHeight);
 	if (elem.clientHeight < elem.scrollHeight) {
 		elem.style.height = elem.scrollHeight + "px";
 	}
