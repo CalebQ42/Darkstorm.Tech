@@ -7,14 +7,18 @@ a {
 	color: lightgray;
 }
 
-input {
+input[type="text"],
+input[type="password"],
+textarea {
 	background-color: #505050;
 	border-color: gray;
 	caret-color: lightgray;
 	color: white;
 }
 
-input:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
 	border-color: white;
 }
 
@@ -32,7 +36,7 @@ input:focus {
 	background-color: black;
 }
 
-#techSelect {
+select {
 	background: transparent;
 	border-radius: 2px;
 	border: 1px solid white;
@@ -48,5 +52,16 @@ input:focus {
 }
 
 #loginButton:active {
+	background-color: black;
+}
+
+.formButton {
+	color: white;
+	background-color: #303030;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+.formButton:active {
 	background-color: black;
 }

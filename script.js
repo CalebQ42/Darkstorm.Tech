@@ -50,3 +50,13 @@ async function expandSidebar() {
 	}
 	sidebar.classList.toggle("extended");
 }
+
+function blogEditorResize() {
+	console.log("YODLE");
+	let elem = document.getElementById("blogEditor");
+	console.log(elem.style.height);
+	console.log(elem.scrollHeight);
+	if (elem.clientHeight < elem.scrollHeight) {
+		elem.style.height = elem.scrollHeight + "px";
+	}
+}
