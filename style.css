@@ -16,6 +16,10 @@ html {
 	font-family: "Noto Sans", Arial, Helvetica, sans-serif;
 }
 
+p {
+	text-align: justify;
+}
+
 button {
 	cursor: pointer;
 }
