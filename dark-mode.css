@@ -22,6 +22,10 @@ textarea:focus {
 	border-color: white;
 }
 
+pre {
+	background-color: #ffffff25;
+}
+
 #login {
 	background-color: #505050;
 	color: lightgray;

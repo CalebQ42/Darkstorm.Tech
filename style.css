@@ -57,6 +57,20 @@ img {
 	box-sizing: content-box;
 }
 
+pre {
+	overflow: auto;
+	padding: 15px;
+}
+
+code {
+	display: inline;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	word-wrap: normal;
+	font-size: 1em;
+}
+
 .files-link {
 	padding: 5px 0px;
 	width: 100%;

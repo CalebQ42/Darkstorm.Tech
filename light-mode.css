@@ -2,6 +2,10 @@ a {
 	color: #1f1f1f;
 }
 
+pre {
+	background-color: #00000025;
+}
+
 #theme {
 	background-color: black;
 	color: white;
