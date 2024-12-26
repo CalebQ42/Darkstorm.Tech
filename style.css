@@ -1,5 +1,6 @@
 * {
 	margin: 0px;
+	box-sizing: border-box;
 }
 
 *:focus {
@@ -287,4 +288,9 @@ code {
 	font-size: 1.25em;
 	min-height: 1.5em;
 	resize: vertical;
+}
+
+.twitter-tweet {
+	margin-left: auto;
+	margin-right: auto;
 }
