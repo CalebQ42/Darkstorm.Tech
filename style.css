@@ -50,8 +50,9 @@ label {
 }
 
 blockquote {
-	/* This is taken directly from Github's formatting*/
-	border-left: 0.25em solid var(--color-border-default);
+	/* Largely inspired by Github's formatting*/
+	border-left: 0.25em solid gray;
+	padding-left: 10px;
 }
 
 iframe,
