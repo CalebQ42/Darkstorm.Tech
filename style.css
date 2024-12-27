@@ -221,7 +221,9 @@ code {
 }
 
 .author-pic {
-	width: 400px;
+	width: 150px;
+	float: left;
+	padding-right: 10px;
 }
 
 .blog {
