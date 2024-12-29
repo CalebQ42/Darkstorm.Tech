@@ -66,11 +66,16 @@ img {
 pre {
 	overflow: auto;
 	padding: 15px;
+	margin: 10px;
+	code {
+		padding: 0;
+	}
 }
 
 code {
+	font-family: monospace;
 	display: inline;
-	padding: 0;
+	padding: 2px 4px;
 	margin: 0;
 	overflow: visible;
 	word-wrap: normal;

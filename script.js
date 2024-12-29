@@ -7,12 +7,6 @@ function onLoad() {
 	if (!darkMode) {
 		setTheme();
 	}
-	document.addEventListener("htmx:configRequest", function (e) {
-		console.log(e);
-		if (e.detail.path.startsWith("https://api.darkstorm.tech") && authToken) {
-			e.detail.headers["Authorization"] = "Bearer " + authToken;
-		}
-	});
 }
 
 async function setTheme() {
@@ -50,7 +44,9 @@ async function expandSidebar() {
 
 function blogEditorResize() {
 	let elem = document.getElementById("blogEditor");
-	if (elem.clientHeight < elem.scrollHeight) {
-		elem.style.height = elem.scrollHeight + "px";
+	let newHeight = elem.scrollHeight;
+	if (newHeight > elem.style.height) {
+		newHeight += 2;
 	}
+	elem.style.height = newHeight + "px";
 }

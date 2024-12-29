@@ -4,6 +4,13 @@ a {
 
 pre {
 	background-color: #00000025;
+	code {
+		background-color: transparent;
+	}
+}
+
+code {
+	background-color: #00000025;
 }
 
 #theme {
