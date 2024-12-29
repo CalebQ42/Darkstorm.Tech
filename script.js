@@ -40,6 +40,7 @@ async function expandSidebar() {
 		cover.style.opacity = 0.25;
 	}
 	sidebar.classList.toggle("extended");
+	sidebar.classList.toggle("elevated");
 }
 
 function blogEditorResize() {

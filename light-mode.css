@@ -30,8 +30,9 @@ select {
 	font-size: 1em;
 }
 
-input {
-	background-color: #909090;
+input,
+textarea {
+	background-color: #00000020;
 	border-color: gray;
 }
 
