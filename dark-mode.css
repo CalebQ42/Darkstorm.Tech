@@ -76,3 +76,14 @@ select {
 .formButton:active {
 	background-color: black;
 }
+
+.blog {
+	h1::after,
+	h2::after {
+		background-color: white;
+	}
+}
+
+.blog-title::after {
+	background-color: white;
+}

@@ -250,8 +250,40 @@ code {
 	padding-right: 10px;
 }
 
+.blog-title {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 0px 20px;
+}
+
+.blog-title::after {
+	content: "";
+	height: 2px;
+	margin: 5px 0px;
+}
+
+.blog-author,
+.blog-time {
+	text-align: center;
+}
+
 .blog {
 	margin-top: 20px;
+	width: 100%;
+	h1,
+	h2 {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	h1::after,
+	h2::after {
+		content: "";
+		height: 2px;
+		margin: 5px 0px;
+	}
 }
 
 /* .blog-time {

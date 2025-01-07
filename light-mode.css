@@ -39,3 +39,14 @@ textarea {
 input:focus {
 	border-color: black;
 }
+
+.blog {
+	h1::after,
+	h2::after {
+		background-color: black;
+	}
+}
+
+.blog-title::after {
+	background-color: black;
+}
