@@ -208,6 +208,8 @@ code {
 	left: 0%;
 	opacity: 1;
 	transition: all 0.25s ease-in-out;
+	display: flex;
+	flex-direction: column;
 }
 
 #content.htmx-swapping {
@@ -272,6 +274,9 @@ code {
 .blog {
 	margin-top: 20px;
 	width: 100%;
+	h1 {
+		text-align: center;
+	}
 	h1,
 	h2 {
 		width: 100%;
